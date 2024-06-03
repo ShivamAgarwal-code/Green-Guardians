@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Montserrat:300,400,700,800|Open+Sans:300');
+
+
+main{
+  max-width: 720px;
+  margin: 5% auto;
+}
+
+.card{
+  box-shadow: 0 6px 6px rgba(0, 0, 0, 0.3);
+  transition: 200ms;
+  background: #fff;
+}
+
+.card__title{
+    display: flex;
+    align-items: center;
+    padding: 30px 40px;
+}
+
+.card__title h3{
+    flex-basis: auto;
+    flex-grow:auto; 
+    flex-shrink:auto;  
+    text-align:right; 
+    margin-right:auto; 
+    color:#252525; 
+    font-family:sans-serif; 
+    font-weight:bold; 
+    font-size :20px; 
+    text-transform :uppercase;
+
+}
+    
+.card__title .icon {
+      flex-basis:auto;  
+      flex-grow:auto;   
+      flex-shrink:auto;   
+      background:black ;  
+      color:#fff ;  
+      padding :10px ;  
+      transition :200ms ;
+
+}
+    
+.card__title .icon > a {
+        color:#fff ;
+        font-style: normal;
+        font-family: sans-serif;
+        text-decoration: none;
+}
+      
+.card__title .icon:hover {
+        background:#252525 ;
+}
+    
+.card__body {
+        padding :0px   ;
+        display:flex   ;
+        flex-flow :row nowrap ;
+        margin-bottom :25px   ;
+}
+    
+.card__body > .half {
+        box-sizing:border-box ;  
+        padding :0px 15px ; 
+        flex-basis:auto;   
+        flex-grow:auto;    
+        flex-shrink:auto;
+
+}
+    
+.card__body .featured_text h1 {
+    margin :0px   ;
+    padding:0px   ;
+    font-weight:bold ;  
+    font-family:"Montserrat", sans-serif;  
+    font-size: 64px ;  
+    line-height:50px ;  
+    color:#181e28 ;
+
+}
+
+.card__body .featured_text p {
+      margin:0px   ;
+      padding :0px   ;
+
+}
+      
+.card__body .featured_text p.sub {
+      font-family:"Montserrat", sans-serif;   
+      font-size:26px ;   
+      text-transform:uppercase ;  
+      color:#686e77 ;   
+      font-weight:normal;
+}
+
+.card__body .featured_text p.price {
+          font-family:"Fjalla One", sans-serif; 
+          color:#252525 ; 
+          font-size:26px ;
+
+}
+    
+.card__body .image{
+          padding-top :15px ;
+          width :100% ;
+
+}
+
+.card__body .image img{
+            display:block;
+            max-width:100%;
+            height:auto;
+}
+
+.card__body .description{
+              margin-bottom :25px;
+
+}
+
+.card__body .description p{
+              margin :0;
+              font-family:"Open Sans", sans-serif;
+              font-weight:normal ;
+              line-height:27px;
+              font-size:16px ;
+              color:#555;
+
+}
+
+span.stock{
+                font-family:"Montserrat", sans-serif;
+                font-weight:bold ;
+                color:#a1cc16;
+
+}
+
+.reviews .stars{
+                  display:inline-block ;
+                  list-style:none  ;
+                  padding :0 ;
+
+}
+      
+.reviews > span{
+                  font-family:"Open Sans", sans-serif;
+                  font-size:14px ;
+                  margin-left :5px ;
+                  color:#555;
+
+}
+
+.card__footer{
+                    padding :30px 40px ;
+                    display:flex   ;
+                    flex-flow:row nowrap ;
+                    align-items:center ;
+                    position:relative ;
+                    justify-content: space-between;
+
+}
+
+.card__footer::before{
+                      content:""   ;
+                      position:absolute   ;
+                      display:block   ;
+                      top:0;
+                      left:40px;
+                      width:calc(100% - 40px);
+                      height:3px;
+                      background:#115dd8;
+                      background:linear-gradient(to right, #115dd8 0%, #115dd8 20%, #ddd 20%, #ddd 100%);
+
+}
+
+.card__footer .recommend {
+                        flex-basis:auto;  
+                        flex-grow:auto;   
+                        flex-shrink:auto;
+
+}
+    
+.card__footer .recommend p {
+                          margin :0;
+                          font-family:"Montserrat", sans-serif; 
+                          text-transform:uppercase ; 
+                          font-weight:bold ;  
+                          font-size:14px ;   
+                          color:#555;
+
+}
+     
+.card__footer .recommend h3 {
+                            margin :0 ;  
+                            font-size:20px ;  
+                            font-family:"Montserrat", sans-serif; 
+                            font-weight:bold ;   
+                            text-transform:uppercase ;  
+                            color:#115dd8;
+
+}
+    
+.card__footer .action button {
+                                cursor:pointer; 
+                                border:1px solid #f86555;  
+                                padding :14px 30px ;  
+                                border-radius :200px; 
+                                color:#fff; 
+                                background: #FA8072; 
+                                font-family:"Open Sans", sans-serif; 
+                                font-size:16px ;  
+                                transition :200ms;
+}
+      
+.card__footer .action button:hover {
+                                      background:rgb(86, 180, 129);
+                                      color: white;
+                                      border: bisque;
+
+}
+.home-icon{
+  padding: 10%;
+}

@@ -1,0 +1,31 @@
+{% extends 'base.html'%}
+{% block title %}
+EverGreen/Contact 
+{% endblock %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'contact.css'%}">
+<div class="arch_contact_us_duplicate">
+  <div class="responsive-container-block big-container">
+    <div class="responsive-container-block container">
+      <div class="responsive-cell-block wk-mobile-12 wk-desk-5 wk-tab-10 wk-ipadp-5" id="ih6s">
+        <p class="text-blk section-head" style="color: black; font-size: 40px;">
+          Get in touch with us.
+        </p>
+      </div>
+      <div class="responsive-cell-block wk-ipadp-6 wk-mobile-12 wk-desk-5 wk-tab-9" id="i6df">
+        <div class="form-wrapper">
+          <form method="post" action="{% url 'contact'%}">{% csrf_token %}
+            <input class="input input-element" name="Name" placeholder="Name" required>
+            <input class="input input-element" name="Contact" placeholder="Contact Number" >
+            <input class="input input-element" name="Email" placeholder="Email" required>
+            <textarea class="textinput input-element" placeholder="Message" name="Msg" required></textarea>
+            <button class="button" type="submit">
+              Send
+            </button>
+        </div>
+          </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,63 @@
+{% extends 'base.html'%}
+{% block title %}
+Buy Product
+{% endblock %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'product.css'%}">
+<main>
+  <div class="card">
+    <div class="card__title">
+      <div class="icon">
+        <a href="{% url 'home'%}">Back</a>{% csrf_token %}
+      </div>
+      <h3>{{obj.category.name }}</h3>
+    </div>
+    <div class="card__body">
+      <div class="half">
+        <div class="featured_text">
+          <h1>{{obj.product_name}}</h1>
+          <p class="price">${{obj.price}}</p>
+        </div>
+        <div class="image">
+          <img src={{obj.image_link}} alt="">
+        </div>
+      </div>
+      <div class="half">
+        <div class="description">
+          <p>{{obj.product_description}}</p>
+        </div>
+        <span class="stock"><i class="fa fa-pen"></i> In stock</span>
+        <div class="reviews">
+          <ul class="stars">
+            <li><i class="fa fa-star"></i></li>
+            <li><i class="fa fa-star"></i></li>
+            <li><i class="fa fa-star"></i></li>
+            <li><i class="fa fa-star"></i></li>
+            <li><i class="fa fa-star-o"></i></li>
+          </ul>
+          <span>(64 reviews)</span>
+        </div>
+      </div>
+    </div>
+    <div class="card__footer">
+      <div class="recommend">
+        <p>Fully Certified</p>
+        <h3>{{obj.seller.username}}</h3>
+      </div>
+      <form method="post" action="{% url 'cart' obj.pk %}">{% csrf_token %}
+        <div class="action">
+          <button type="submit" style="float: right;" onclick="{additem()}">Add to cart</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</main>
+</body>
+<script>
+  function additem(){
+    alert('Item has been added to your cart')
+  }
+</script>
+
+{% endblock %}

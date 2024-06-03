@@ -1,0 +1,23 @@
+{% extends 'base.html'%}
+{% block title %}
+EverGreen MarketPlace
+{% endblock %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'home.css'%}">
+{% if not user.is_authenticated %}
+<div class="alert alert-danger" role="alert">
+  Users must Log in to buy or sell products.
+</div>
+{% endif %}
+<div id="columns" class="columns_5">
+  {% for item in obj%}
+  <figure>
+  <img src="{{item.image_link}}">
+	<figcaption>{{item.product_name}}</figcaption>
+    <span class="price">${{item.price}}</span>
+    <a class="button" href="{% url 'product' item.pk %}">Buy Now</a>
+	</figure>
+  {% endfor  %}
+	</div>
+{% endblock %}
